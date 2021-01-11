@@ -1,10 +1,10 @@
 {
-  "name": "vier-component-library",
+  "name": "luxor-component-library",
   "version": "1.0.0",
-  "description": "UI Components for Pontigrate/VIER",
+  "description": "React UI Component Library",
   "author": "jmoussa",
   "license": "MIT",
-  "repository": "vier/vier-component-library",
+  "repository": "jmoussa/luxor-component-library",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -49,5 +49,14 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "resolutions": {
+    "styled-components": "^5"
+  },
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "styled-components": "^5.2.1"
+  }
 }

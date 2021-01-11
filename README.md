@@ -1,13 +1,13 @@
-# vier-component-library
+# Luxor-component-library
 
-> UI Components for Pontigrate/VIER
+> React UI Component Library 
 
-[![NPM](https://img.shields.io/npm/v/vier-component-library.svg)](https://www.npmjs.com/package/vier-component-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/luxor-component-library.svg)](https://www.npmjs.com/package/luxor-component-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save vier-component-library
+npm install --save luxor-component-library
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install --save vier-component-library
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'vier-component-library'
-import 'vier-component-library/dist/index.css'
+import MyComponent from 'luxor-component-library'
+import 'luxor-component-library/dist/index.css'
 
 class Example extends Component {
   render() {

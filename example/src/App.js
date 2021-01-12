@@ -66,7 +66,7 @@ const App = () => {
           backgroundColor={defaultTheme.palette.grey[300]}
         >
           <h1 style={header_styling}>
-            This is a Guide to our visual component library
+            This is a Guide to the Luxor Component Library
           </h1>
           <Row
             margin='large'
@@ -179,26 +179,42 @@ const App = () => {
           backgroundColor={defaultTheme.palette.grey[300]}
         >
           <Row space='large' paddingRight='medium'>
-            <Box
-              textAlign='center'
-              paddingY='xlarge'
-              paddingX='xlarge'
-              position='relative'
-            >
-              <h1
-                style={{
-                  margin: '0',
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  ...header_styling
-                }}
-              >
-                Buttons
-              </h1>
-            </Box>
-            <Stack space='medium' paddingY='xlarge'>
+            <Stack space='large' paddingY='xxlarge'>
+              <Box>
+                <Button
+                  variant='solid'
+                  color='primary'
+                  size='small'
+                  text='Solid Small Primary Button'
+                />
+              </Box>
+              <Box>
+                <Button
+                  variant='solid'
+                  color='secondary'
+                  size='medium'
+                  text='Solid Small Secondary Button'
+                />
+              </Box>
+              <Box>
+                <Button
+                  variant='outline'
+                  color='primary'
+                  size='small'
+                  enableElevation
+                  text='Outline Small Primary Button'
+                />
+              </Box>
+              <Box>
+                <Button
+                  variant='outline'
+                  color='secondary'
+                  size='small'
+                  text='Outline Small Secondary Button'
+                />
+              </Box>
+            </Stack>
+            <Stack space='large' paddingY='xlarge'>
               <Box>
                 <Button
                   variant='solid'
@@ -272,6 +288,88 @@ const App = () => {
               </Box>
             </Stack>
           </Row>
+        </Box>
+      </Row>
+      <Row padding='xlarge' paddingTop='medium' space='medium'>
+        <Box
+          padding='small'
+          paddingBottom='medium'
+          marginX='medium'
+          marginY='medium'
+          display='block'
+          textAlign='center'
+          roundedCorners
+          backgroundColor={defaultTheme.palette.grey[300]}
+        >
+          <h1 id='button-header' style={header_styling}>
+            Boxes
+          </h1>
+          <p style={paragraph_styling}>
+            Boxes are the fundamental visual and container components
+            <br />
+            <br />
+            <code>Properties:</code>
+            <ul style={{ listStyleType: 'circle' }}>
+              <li>padding (X|Y|Top|Bottom|Left|Right)</li>
+              <li>margin (X|Y|Top|Bottom|Left|Right)</li>
+              <li>position</li>
+              <li>top</li>
+              <li>bottom</li>
+              <li>left</li>
+              <li>right</li>
+              <li>backgroundColor</li>
+              <li>backgroundImage</li>
+              <li>textAlign</li>
+              <li>width</li>
+              <li>display</li>
+              <li>roundedCorners</li>
+              <li>onClick</li>
+              <li>theme</li>
+              <li>display</li>
+              <li>textAlign</li>
+              <li>roundedCorners</li>
+              <li>
+                and can be extended to support any other native CSS properties
+              </li>
+            </ul>
+            <br />
+            <br />
+            If you are looking to add interactivity, the <code>
+              onClick
+            </code>{' '}
+            property will allow you to hook it up to a function
+          </p>
+        </Box>
+        <Box
+          padding='small'
+          paddingBottom='medium'
+          marginX='medium'
+          marginY='medium'
+          display='block'
+          textAlign='center'
+          roundedCorners
+          backgroundColor={defaultTheme.palette.grey[300]}
+        >
+          <Stack
+            padding='xlarge'
+            paddingY='large'
+            textAlign='center'
+            space='medium'
+            style={{ listStyleType: 'none' }}
+          >
+            <Box backgroundColor={defaultTheme.palette.primary.main}>
+              Box with no properties set except backgroundColor set to the
+              primary main color
+            </Box>
+            <Box
+              padding='small'
+              roundedCorners
+              backgroundColor={defaultTheme.palette.secondary.light}
+            >
+              Box with <code>padding</code>, <code>margin</code>,
+              roundedCorders, and backgroundColor set to the primary main color.
+            </Box>
+          </Stack>
         </Box>
       </Row>
     </Stack>

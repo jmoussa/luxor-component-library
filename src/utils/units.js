@@ -11,10 +11,12 @@ export const spacing = {
 }
 
 export const fontSizes = {
-  xsmall: '0.79rem',
-  small: '0.889rem',
-  medium: '1rem',
-  large: '1.125rem',
-  xlarge: '1.266rem',
-  xxlarge: '1.424rem'
+  xsmall: '0.889rem',
+  small: '1rem',
+  medium: '1.125rem',
+  large: '1.155rem',
+  xlarge: '1.56rem',
+  xxlarge: '1.69rem',
+  header: '4rem',
+  sub_header: '3rem'
 }

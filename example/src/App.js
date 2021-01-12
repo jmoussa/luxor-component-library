@@ -6,7 +6,8 @@ import {
   defaultTheme,
   Row,
   Stack,
-  spacing
+  spacing,
+  fontSizes
 } from 'vier-component-library'
 import 'vier-component-library/dist/index.css'
 
@@ -15,22 +16,24 @@ const App = () => {
     fontFamily: defaultTheme.typography.primaryFontFamily,
     color: defaultTheme.palette.common.white
   }
-  const sub_header_styling = {
-    fontFamily: defaultTheme.typography.secondaryFontFamily,
-    color: defaultTheme.palette.secondary.light
-  }
   const paragraph_styling = {
     textAlign: 'left',
     padding: spacing.large,
     margin: spacing.large,
-    fontFamily: defaultTheme.typography.fontFamily,
+    fontFamily: defaultTheme.typography.primaryFontFamily,
+    fontSize: fontSizes.medium,
     color: defaultTheme.palette.common.white
   }
   const title_styling = {
     ...header_styling,
     color: defaultTheme.palette.common.white,
-    fontSize: '3.5rem',
+    fontSize: fontSizes.header,
     paddingBottom: 'medium'
+  }
+  const sub_header_styling = {
+    fontFamily: defaultTheme.typography.secondaryFontFamily,
+    fontSize: fontSizes.sub_header,
+    color: defaultTheme.palette.secondary.light
   }
   return (
     <Stack
@@ -351,8 +354,7 @@ const App = () => {
           backgroundColor={defaultTheme.palette.grey[300]}
         >
           <Stack
-            padding='xlarge'
-            paddingY='large'
+            padding='xxlarge'
             textAlign='center'
             space='medium'
             style={{ listStyleType: 'none' }}

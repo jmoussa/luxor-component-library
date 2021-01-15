@@ -7,7 +7,8 @@ import {
   Row,
   Stack,
   spacing,
-  fontSizes
+  fontSizes,
+  WeatherWidget
 } from 'vier-component-library'
 import 'vier-component-library/dist/index.css'
 
@@ -372,6 +373,11 @@ const App = () => {
               roundedCorders, and backgroundColor set to the primary main color.
             </Box>
           </Stack>
+        </Box>
+      </Row>
+      <Row padding='xlarge' paddingTop='medium' space='medium'>
+        <Box padding='large'>
+          <WeatherWidget />
         </Box>
       </Row>
     </Stack>

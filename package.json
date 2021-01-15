@@ -57,6 +57,7 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "axios": "^0.21.1",
     "styled-components": "^5.2.1"
   }
 }

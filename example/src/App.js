@@ -371,7 +371,8 @@ const App = () => {
               backgroundColor={defaultTheme.palette.secondary.light}
             >
               Box with <code>padding</code>, <code>margin</code>,
-              roundedCorders, and backgroundColor set to the primary main color.
+              roundedCorders, and backgroundColor set to the secondary light
+              color.
             </Box>
           </Stack>
         </Box>

@@ -1,4 +1,4 @@
-# Luxor-component-library
+# Luxor Component Library
 
 > React UI Component Library 
 
@@ -25,6 +25,10 @@ class Example extends Component {
 }
 ```
 
+## Weather Widget
+
+A note on the weather widget in that it requires an API_KEY to be exported from a local.js file in `src/config/local.js`. API Key should go belong to a valid RapidAPI account.
+
 ## Demo
 To run the live interactive demo. Pull down the source code from github and navigate to `example/` and run:
 
@@ -35,6 +39,8 @@ To run the live interactive demo. Pull down the source code from github and navi
 
 __NOTE: If you do not have the package installed locally you will need to run the same calls from the root folder in a separate terminal__
 
+
+### This is an ongoing project so please be patient :)
 
 ## License
 

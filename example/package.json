@@ -1,5 +1,5 @@
 {
-  "name": "vier-component-library-example",
+  "name": "luxor-component-library-example",
   "homepage": ".",
   "version": "0.0.0",
   "private": true,
@@ -13,7 +13,7 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "file:../node_modules/react-scripts",
-    "vier-component-library": "file:.."
+    "luxor-component-library": "file:.."
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

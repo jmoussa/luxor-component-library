@@ -51,25 +51,28 @@ class WeatherWidget extends Component {
       return (
         <Box
           textAlign='center'
-          padding='medium'
+          padding='small'
+          margin='none'
           roundedCorners
           style={{ color: defaultTheme.palette.common.white }}
           backgroundColor={defaultTheme.palette.secondary.main}
         >
-          <h1>{city}</h1>
-          <h1>{currentTemp} &deg;F</h1>
-          <h1>Feels like {feelsLike} &deg;F</h1>
-          <Row>
-            <Box>
-              <h2>High: {hi} &deg;F</h2>
-            </Box>
-            <Box>
-              <h2>Low: {lo} &deg;F</h2>
-            </Box>
-            <Box>
-              <h2>Humidity: {humidity} %</h2>
-            </Box>
-          </Row>
+          <Box marginX='xxxlarge' marginY='large'>
+            <h1>{city}</h1>
+            <h2>Current: {currentTemp}&deg;F</h2>
+            <h2>Feels like: {feelsLike}&deg;F</h2>
+            <Row space='none' textAlign='center'>
+              <Box>
+                <h3>High: {hi}&deg;F</h3>
+              </Box>
+              <Box>
+                <h3>Low: {lo}&deg;F</h3>
+              </Box>
+              <Box>
+                <h3>Humidity: {humidity}%</h3>
+              </Box>
+            </Row>
+          </Box>
         </Box>
       )
     }

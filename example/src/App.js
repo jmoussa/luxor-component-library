@@ -9,8 +9,8 @@ import {
   spacing,
   fontSizes,
   WeatherWidget
-} from 'vier-component-library'
-import 'vier-component-library/dist/index.css'
+} from 'luxor-component-library'
+import 'luxor-component-library/dist/index.css'
 
 const App = () => {
   const header_styling = {
@@ -23,7 +23,8 @@ const App = () => {
     margin: spacing.large,
     fontFamily: defaultTheme.typography.primaryFontFamily,
     fontSize: fontSizes.medium,
-    color: defaultTheme.palette.common.white
+    color: defaultTheme.palette.common.white,
+    lineHeight: 1.45
   }
   const title_styling = {
     ...header_styling,
@@ -376,7 +377,35 @@ const App = () => {
         </Box>
       </Row>
       <Row padding='xlarge' paddingTop='medium' space='medium'>
-        <Box padding='large'>
+        <Box
+          padding='small'
+          paddingBottom='medium'
+          marginX='medium'
+          marginY='medium'
+          display='block'
+          textAlign='center'
+          roundedCorners
+          backgroundColor={defaultTheme.palette.grey[300]}
+        >
+          <h1 style={header_styling}>Weather Widget</h1>
+          <p style={paragraph_styling}>
+            This weather widget uses RapidAPI's Open Weather Map. It's a free
+            api that allows you to get weather data. For this to work you will
+            need to create a local.json in{' '}
+            <code>component-library/src/config/local.json</code> and have it
+            export the <code>API_KEY</code> for RapidAPI.
+          </p>
+        </Box>
+        <Box
+          padding='large'
+          paddingBottom='medium'
+          marginX='medium'
+          marginY='medium'
+          display='block'
+          textAlign='center'
+          roundedCorners
+          backgroundColor={defaultTheme.palette.grey[300]}
+        >
           <WeatherWidget />
         </Box>
       </Row>

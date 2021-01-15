@@ -7,7 +7,8 @@ export const spacing = {
   gutter: '24px',
   large: '32px',
   xlarge: '48px',
-  xxlarge: '96px'
+  xxlarge: '96px',
+  xxxlarge: '136px'
 }
 
 export const fontSizes = {

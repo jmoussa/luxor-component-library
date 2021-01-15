@@ -21,7 +21,7 @@ dist
 *.eslintrc
 *.npmignore
 *.travis.yml
-
+*.prettierrc
 */config/local*
 
 npm-debug.log*

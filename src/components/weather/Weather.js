@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Box } from '../box/Box'
 import { Row } from '../row/Row'
 import { theme as defaultTheme } from '../../utils/theme'
-import { API_KEY } from '../../config/local'
 import axios from 'axios'
+import { config } from '../../config/dev'
 
 class WeatherWidget extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class WeatherWidget extends Component {
       params: { q: 'new york city,us', lang: 'English', units: 'imperial' },
       headers: {
         'access-control-allow-origin': '*',
-        'x-rapidapi-key': API_KEY,
+        'x-rapidapi-key': config.RAPID_API_KEY,
         'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com'
       }
     }

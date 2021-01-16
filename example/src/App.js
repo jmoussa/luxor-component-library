@@ -162,12 +162,14 @@ const App = () => {
           </h1>
           <p style={paragraph_styling}>
             Buttons have 4 main properties that give you an array of options.
-            <ul style={{ listStyleType: 'circle' }}>
-              <li>Variant</li>
-              <li>Color</li>
-              <li>Size</li>
-              <li>Text</li>
-            </ul>
+          </p>
+          <ul style={{ listStyleType: 'circle' }}>
+            <li>Variant</li>
+            <li>Color</li>
+            <li>Size</li>
+            <li>Text</li>
+          </ul>
+          <p style={paragraph_styling}>
             If you are looking to add interactivity, the <code>onClick</code>{' '}
             property will allow you to hook it up to a function
           </p>
@@ -314,34 +316,34 @@ const App = () => {
             <br />
             <br />
             <code>Properties:</code>
-            <ul style={{ listStyleType: 'circle' }}>
-              <li>padding (X|Y|Top|Bottom|Left|Right)</li>
-              <li>margin (X|Y|Top|Bottom|Left|Right)</li>
-              <li>position</li>
-              <li>top</li>
-              <li>bottom</li>
-              <li>left</li>
-              <li>right</li>
-              <li>backgroundColor</li>
-              <li>backgroundImage</li>
-              <li>textAlign</li>
-              <li>width</li>
-              <li>display</li>
-              <li>roundedCorners</li>
-              <li>onClick</li>
-              <li>theme</li>
-              <li>display</li>
-              <li>textAlign</li>
-              <li>roundedCorners</li>
-              <li>
-                and can be extended to support any other native CSS properties
-              </li>
-            </ul>
-            <br />
-            <br />
-            If you are looking to add interactivity, the <code>
-              onClick
-            </code>{' '}
+          </p>
+          <ul style={{ listStyleType: 'circle' }}>
+            <li>padding (X|Y|Top|Bottom|Left|Right)</li>
+            <li>margin (X|Y|Top|Bottom|Left|Right)</li>
+            <li>position</li>
+            <li>top</li>
+            <li>bottom</li>
+            <li>left</li>
+            <li>right</li>
+            <li>backgroundColor</li>
+            <li>backgroundImage</li>
+            <li>textAlign</li>
+            <li>width</li>
+            <li>display</li>
+            <li>roundedCorners</li>
+            <li>onClick</li>
+            <li>theme</li>
+            <li>display</li>
+            <li>textAlign</li>
+            <li>roundedCorners</li>
+            <li>
+              and can be extended to support any other native CSS properties
+            </li>
+          </ul>
+          <br />
+          <br />
+          <p style={{ paragraph_styling }}>
+            If you are looking to add interactivity, the <code>onClick</code>{' '}
             property will allow you to hook it up to a function
           </p>
         </Box>

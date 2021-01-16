@@ -1,4 +1,3 @@
-import { Button } from './components/button/Button'
 import { Box } from './components/box/Box'
 import { Stack } from './components/stack/Stack'
 import { Row } from './components/row/Row'

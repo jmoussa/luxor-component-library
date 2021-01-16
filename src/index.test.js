@@ -3,12 +3,6 @@ import { Box } from './components/box/Box'
 import { Stack } from './components/stack/Stack'
 import { Row } from './components/row/Row'
 
-describe('Button', () => {
-  it('is truthy', () => {
-    expect(Button).toBeTruthy()
-  })
-})
-
 describe('Box', () => {
   it('is truthy', () => {
     expect(Box).toBeTruthy()

@@ -17,10 +17,6 @@ dist
 .env.test.local
 .env.production.local
 *.editorconfig
-*.eslintignore
-*.eslintrc
-*.npmignore
-*.travis.yml
 *.prettierrc
 */config/local*
 

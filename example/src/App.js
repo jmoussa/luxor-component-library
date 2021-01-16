@@ -19,12 +19,17 @@ const App = () => {
   }
   const paragraph_styling = {
     textAlign: 'left',
-    padding: spacing.large,
-    margin: spacing.large,
+    padding: spacing.medium,
+    margin: spacing.medium,
     fontFamily: defaultTheme.typography.primaryFontFamily,
     fontSize: fontSizes.medium,
     color: defaultTheme.palette.common.white,
     lineHeight: 1.45
+  }
+  const paragraph_list_styling = {
+    ...paragraph_styling,
+    listStyleType: 'circle',
+    marginLeft: spacing.xlarge
   }
   const title_styling = {
     ...header_styling,
@@ -163,7 +168,7 @@ const App = () => {
           <p style={paragraph_styling}>
             Buttons have 4 main properties that give you an array of options.
           </p>
-          <ul style={{ listStyleType: 'circle' }}>
+          <ul style={paragraph_list_styling}>
             <li>Variant</li>
             <li>Color</li>
             <li>Size</li>
@@ -317,7 +322,7 @@ const App = () => {
             <br />
             <code>Properties:</code>
           </p>
-          <ul style={{ listStyleType: 'circle' }}>
+          <ul style={paragraph_list_styling}>
             <li>padding (X|Y|Top|Bottom|Left|Right)</li>
             <li>margin (X|Y|Top|Bottom|Left|Right)</li>
             <li>position</li>
@@ -342,7 +347,7 @@ const App = () => {
           </ul>
           <br />
           <br />
-          <p style={{ paragraph_styling }}>
+          <p style={paragraph_styling}>
             If you are looking to add interactivity, the <code>onClick</code>{' '}
             property will allow you to hook it up to a function
           </p>

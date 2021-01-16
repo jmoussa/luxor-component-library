@@ -2,7 +2,7 @@
 
 > React UI Component Library
 
-[![NPM](https://img.shields.io/npm/v/@jmoussa/luxor-component-library)](https://www.npmjs.com/package/@jmoussa/luxor-component-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/@jmoussa/luxor-component-library)](https://www.npmjs.com/package/@jmoussa/luxor-component-library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)[![Build Status](https://img.shields.io/travis/com/jmoussa/luxor-component-library?label=Build%20Status)]
 
 ## Install
 

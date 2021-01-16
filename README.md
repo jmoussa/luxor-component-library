@@ -46,6 +46,13 @@ To run the live interactive demo. Pull down the source code from github and navi
 
 ### This is an ongoing project so please be patient :)
 
+# Screenshots
+
+![T1](./screenshots/1.jpg?raw=true)
+![T2](./screenshots/2.jpg?raw=true)
+![Boxes](./screenshots/Boxes.jpg?raw=true)
+![Weather](./screenshots/weather.jpg?raw=true)
+
 ## License
 
 MIT © [jmoussa](https://github.com/jmoussa)

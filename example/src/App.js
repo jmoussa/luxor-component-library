@@ -368,18 +368,79 @@ const App = () => {
             space='medium'
             style={{ listStyleType: 'none' }}
           >
-            <Box backgroundColor={defaultTheme.palette.primary.main}>
-              Box with no properties set except backgroundColor set to the
-              primary main color
+            <Box>
+              <Row textAlign='center' space='small'>
+                <Box backgroundColor={defaultTheme.palette.primary.main}>
+                  No Properties
+                </Box>
+                <Box
+                  backgroundColor={defaultTheme.palette.primary.main}
+                  padding='small'
+                >
+                  <Box backgroundColor={defaultTheme.palette.primary.light}>
+                    Padding = 'small'
+                  </Box>
+                </Box>
+                <Box
+                  backgroundColor={defaultTheme.palette.primary.main}
+                  padding='medium'
+                >
+                  <Box backgroundColor={defaultTheme.palette.primary.light}>
+                    Padding = 'medium'
+                  </Box>
+                </Box>
+                <Box
+                  backgroundColor={defaultTheme.palette.primary.main}
+                  padding='large'
+                >
+                  <Box backgroundColor={defaultTheme.palette.primary.light}>
+                    Padding = 'large'
+                  </Box>
+                </Box>
+              </Row>
+            </Box>
+            <Box>
+              <Row space='small'>
+                <Box backgroundColor={defaultTheme.palette.primary.main}>
+                  No Properties
+                </Box>
+                <Box
+                  backgroundColor={defaultTheme.palette.primary.main}
+                  margin='small'
+                >
+                  <Box backgroundColor={defaultTheme.palette.primary.light}>
+                    Margin = 'small'
+                  </Box>
+                </Box>
+                <Box
+                  backgroundColor={defaultTheme.palette.primary.main}
+                  margin='medium'
+                >
+                  <Box backgroundColor={defaultTheme.palette.primary.light}>
+                    Margin = 'medium'
+                  </Box>
+                </Box>
+                <Box
+                  backgroundColor={defaultTheme.palette.primary.main}
+                  margin='large'
+                >
+                  <Box backgroundColor={defaultTheme.palette.primary.light}>
+                    Margin = 'large'
+                  </Box>
+                </Box>
+              </Row>
             </Box>
             <Box
-              padding='small'
+              padding='medium'
               roundedCorners
               backgroundColor={defaultTheme.palette.secondary.light}
             >
-              Box with <code>padding</code>, <code>margin</code>,
-              roundedCorders, and backgroundColor set to the secondary light
-              color.
+              <h1 style={header_styling}>Box with </h1>
+              <ul style={paragraph_list_styling}>
+                <li>Medium Padding</li>
+                <li>Rounded Corners</li>
+                <li>Secondary light background color</li>
+              </ul>
             </Box>
           </Stack>
         </Box>
@@ -399,9 +460,8 @@ const App = () => {
           <p style={paragraph_styling}>
             This weather widget uses RapidAPI's Open Weather Map. It's a free
             api that allows you to get weather data. For this to work you will
-            need to create a local.json in{' '}
-            <code>component-library/src/config/local.json</code> and have it
-            export the <code>API_KEY</code> for RapidAPI.
+            need an RapidAPI API Key stored in an environment variable called{' '}
+            <code>REACT_APP_RAPIDAPI_KEY</code>
           </p>
         </Box>
         <Box
@@ -414,7 +474,7 @@ const App = () => {
           roundedCorners
           backgroundColor={defaultTheme.palette.grey[300]}
         >
-          <WeatherWidget />
+          <WeatherWidget city='new york city,us' />
         </Box>
       </Row>
     </Stack>

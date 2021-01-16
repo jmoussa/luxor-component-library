@@ -13,10 +13,11 @@ class WeatherWidget extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true })
+    const city = this.props.city || 'los angeles,us'
     const options = {
       method: 'GET',
       url: 'https://community-open-weather-map.p.rapidapi.com/weather',
-      params: { q: 'new york city,us', lang: 'English', units: 'imperial' },
+      params: { q: city, lang: 'English', units: 'imperial' },
       headers: {
         'access-control-allow-origin': '*',
         'x-rapidapi-key': config.RAPID_API_KEY,

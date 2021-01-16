@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '../box/Box'
-import { Row } from '../Row/Row'
+import { Row } from '../row/Row'
 
 const StackChildrenTypes = [Box, Row]
 const UnsupportedChildTypeWarning =

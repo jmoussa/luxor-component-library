@@ -1,4 +1,7 @@
+sudo: true
 language: node_js
 node_js:
-  - 12
-  - 10
+- node
+git:
+  quiet: true
+cache: npm

@@ -33,18 +33,32 @@ class Example extends Component {
 
 A note on the weather widget in that it requires an RapidAPI API key to function. Store the API key in an environment variable called `REACT_APP_RAPIDAPI_KEY` either with an export statement or in a `.env` file in the root folder.
 
+---
+
 ## Demo
 
-To run the live interactive demo. Pull down the source code from github and navigate to `example/` and run:
+To run the live demo (screenshots below). Pull down the source code from github and navigate to `example/` and run:
 
 ```bash
 >> npm install
 >> npm start
 ```
-
 **NOTE: If you do not have the package installed locally you will need to run the same calls from the root folder in a separate terminal**
 
-### This is an ongoing project so please be patient :)
+---
+
+## Development
+
+- Fork the github repo
+- Setup (RapidAPI API key needed for weather module):
+```bash
+>> npm install
+>> export REACT_APP_RAPIDAPI_KEY='...' 
+```
+- Develop
+- Send a PR
+
+--- 
 
 # Screenshots
 

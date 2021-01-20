@@ -21,6 +21,11 @@ const StyledBox = ({
   display,
   roundedCorners,
   onClick,
+  opacity,
+  className,
+  border,
+  color,
+  transform,
   theme,
   ...props
 }) => {
@@ -80,8 +85,13 @@ const StyledBox = ({
     backgroundImage,
     onClick,
     textAlign,
+    border,
     borderRadius,
-    fontFamily: theme.typography.fontFamily
+    className,
+    color,
+    transform,
+    opacity,
+    fontFamily: theme.typography.primaryFontFamily
   }
 }
 
@@ -90,7 +100,12 @@ const IGNORED_PROPS = [
   'width',
   'backgroundColor',
   'textAlign',
-  'backgroundImage'
+  'backgroundImage',
+  'opacity',
+  'className',
+  'transform',
+  'color',
+  'border'
 ]
 
 const boxConfig = {

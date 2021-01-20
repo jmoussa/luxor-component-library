@@ -4,7 +4,7 @@ import { Row } from '../row/Row'
 import { theme as defaultTheme } from '../../utils/theme'
 import axios from 'axios'
 import { config } from '../../config/dev'
-
+import styles from './weather.css'
 class WeatherWidget extends Component {
   constructor(props) {
     super(props)
@@ -50,29 +50,38 @@ class WeatherWidget extends Component {
         feelsLike = weather.main.feels_like || undefined
       }
       return (
-        <Box
-          textAlign='center'
-          padding='small'
-          margin='none'
-          roundedCorners
-          style={{ color: defaultTheme.palette.common.white }}
-          backgroundColor={defaultTheme.palette.secondary.main}
-        >
-          <Box marginX='xxxlarge' marginY='large'>
-            <h1>{city}</h1>
-            <h2>Current: {currentTemp}&deg;F</h2>
-            <h2>Feels like: {feelsLike}&deg;F</h2>
-            <Row space='none' textAlign='center'>
-              <Box>
-                <h3>High: {hi}&deg;F</h3>
-              </Box>
-              <Box>
-                <h3>Low: {lo}&deg;F</h3>
-              </Box>
-              <Box>
-                <h3>Humidity: {humidity}%</h3>
-              </Box>
-            </Row>
+        <Box roundedCorners className={styles.container}>
+          <div className={styles.bg} />
+          <Box
+            textAlign='center'
+            padding='small'
+            margin='none'
+            roundedCorners
+            color={defaultTheme.palette.common.white}
+            style={{ fontWeight: 'bold', zIndex: '2' }}
+          >
+            <Box
+              marginX='xlarge'
+              marginY='large'
+              padding='medium'
+              className={styles.overlay}
+            >
+              <h1>{city}</h1>
+              <h1>{currentTemp}&deg;F</h1>
+              <h2>Feels like: {feelsLike}&deg;F</h2>
+              <br />
+              <Row space='small' textAlign='center'>
+                <Box>
+                  <h3>High: {hi}&deg;F</h3>
+                </Box>
+                <Box>
+                  <h3>Low: {lo}&deg;F</h3>
+                </Box>
+                <Box>
+                  <h3>Humidity: {humidity}%</h3>
+                </Box>
+              </Row>
+            </Box>
           </Box>
         </Box>
       )

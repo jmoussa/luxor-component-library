@@ -489,6 +489,12 @@ class App extends React.Component {
             backgroundColor={defaultTheme.palette.grey[300]}
           >
             <WeatherWidget city='new york city,us' />
+            <WeatherWidget
+              city='london,uk'
+              margin='large'
+              paddingX='xxxlarge'
+              marginX='xxxlarge'
+            />
           </Box>
         </Row>
       </Stack>

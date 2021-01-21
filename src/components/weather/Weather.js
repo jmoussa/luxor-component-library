@@ -39,7 +39,7 @@ class WeatherWidget extends Component {
     if (isLoading) {
       return <h2>Loading ...</h2>
     } else {
-      let city, currentTemp, hi, lo, humidity, feelsLike
+      let city, currentTemp, hi, lo, humidity, feelsLike, description
 
       if (weather && weather.main) {
         city = weather.name || undefined
@@ -49,39 +49,47 @@ class WeatherWidget extends Component {
         humidity = weather.main.humidity || undefined
         feelsLike = weather.main.feels_like || undefined
       }
+
+      if (weather && weather.weather) {
+        console.log(weather)
+        const s = weather.weather[0].description || undefined
+        description = s.charAt(0).toUpperCase() + s.slice(1)
+      }
       return (
-        <Box roundedCorners className={styles.container}>
+        <Box
+          roundedCorners
+          className={styles.container}
+          padding='medium'
+          {...this.props}
+        >
           <div className={styles.bg} />
           <Box
             textAlign='center'
-            padding='small'
-            margin='none'
+            padding='none'
+            paddingX='small'
+            margin='xlarge'
             roundedCorners
             color={defaultTheme.palette.common.white}
             style={{ fontWeight: 'bold', zIndex: '2' }}
+            className={styles.overlay}
           >
-            <Box
-              marginX='xlarge'
-              marginY='large'
-              padding='medium'
-              className={styles.overlay}
-            >
-              <h1>{city}</h1>
-              <h1>{currentTemp}&deg;F</h1>
-              <h2>Feels like: {feelsLike}&deg;F</h2>
-              <br />
-              <Row space='small' textAlign='center'>
-                <Box>
-                  <h3>High: {hi}&deg;F</h3>
-                </Box>
-                <Box>
-                  <h3>Low: {lo}&deg;F</h3>
-                </Box>
-                <Box>
-                  <h3>Humidity: {humidity}%</h3>
-                </Box>
-              </Row>
-            </Box>
+            <h1>{city}</h1>
+            <h1>{currentTemp}&deg;F</h1>
+            <h1>{description}</h1>
+            <br />
+            <h2>Feels like: {feelsLike}&deg;F</h2>
+            <br />
+            <Row space='small' textAlign='center'>
+              <Box>
+                <h3>High: {hi}&deg;F</h3>
+              </Box>
+              <Box>
+                <h3>Low: {lo}&deg;F</h3>
+              </Box>
+              <Box>
+                <h3>Humidity: {humidity}%</h3>
+              </Box>
+            </Row>
           </Box>
         </Box>
       )

@@ -8,7 +8,12 @@ import styles from './weather.css'
 class WeatherWidget extends Component {
   constructor(props) {
     super(props)
+    this.forceUpdateHandler = this.forceUpdateHandler.bind(this)
     this.state = { weather: {}, isLoading: false }
+  }
+
+  forceUpdateHandler() {
+    this.forceUpdate()
   }
 
   componentDidMount() {
@@ -31,6 +36,12 @@ class WeatherWidget extends Component {
       })
       .catch((error) => {
         console.error(error)
+        setTimeout(
+          function () {
+            this.forceUpdateHandler()
+          }.bind(this),
+          2000
+        )
       })
   }
 
@@ -39,7 +50,14 @@ class WeatherWidget extends Component {
     if (isLoading) {
       return <h2>Loading ...</h2>
     } else {
-      let city, currentTemp, hi, lo, humidity, feelsLike, description
+      let city,
+        currentTemp,
+        hi,
+        lo,
+        humidity,
+        feelsLike,
+        description,
+        weatherBackgroundClass
 
       if (weather && weather.main) {
         city = weather.name || undefined
@@ -51,9 +69,20 @@ class WeatherWidget extends Component {
       }
 
       if (weather && weather.weather) {
-        console.log(weather)
+        // console.log(weather) // useful for adding new features
         const s = weather.weather[0].description || undefined
         description = s.charAt(0).toUpperCase() + s.slice(1)
+        if (description.includes('cloud')) {
+          weatherBackgroundClass = styles.cloudy
+        } else if (description.includes('sun')) {
+          weatherBackgroundClass = styles.sunny
+        } else if (description.includes('snow')) {
+          weatherBackgroundClass = styles.snowy
+        } else if (description.includes('rain')) {
+          weatherBackgroundClass = styles.rainy
+        } else {
+          weatherBackgroundClass = styles.bg
+        }
       }
       return (
         <Box
@@ -62,7 +91,7 @@ class WeatherWidget extends Component {
           padding='medium'
           {...this.props}
         >
-          <div className={styles.bg} />
+          <div className={weatherBackgroundClass} />
           <Box
             textAlign='center'
             padding='none'

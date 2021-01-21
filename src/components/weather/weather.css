@@ -13,8 +13,8 @@
   background-size: cover;
   background-blend-mode: screen;
   background-size: cover;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
+  filter: blur(0.8px);
+  -webkit-filter: blur(0.8px);
 
   top: 0;
   left: 0;
@@ -27,6 +27,104 @@
   border-radius: inherit;
 }
 
+.cloudy {
+  content: '';
+  opacity: 0.3;
+  background: url('https://img.fotocommunity.com/cloudy-landscape-fffe80b7-8a50-48e7-9f47-83221668256f.jpg?height=1080')
+    no-repeat scroll top;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  background-size: cover;
+  filter: blur(0.8px);
+  -webkit-filter: blur(0.8px);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  /*z-index: -1;*/
+  height: 100%;
+  border-radius: inherit;
+}
+
+.snowy {
+  content: '';
+  opacity: 0.3;
+  background: url('https://i.ytimg.com/vi/ik-ZBrca5aI/maxresdefault.jpg')
+    no-repeat scroll top;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  background-size: cover;
+  filter: blur(0.8px);
+  -webkit-filter: blur(0.8px);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  /*z-index: -1;*/
+  height: 100%;
+  border-radius: inherit;
+}
+
+.rainy {
+  content: '';
+  opacity: 0.3;
+  background: url('https://i.imgur.com/YvBRtej.jpg') no-repeat scroll top;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  background-size: cover;
+  filter: blur(0.8px);
+  -webkit-filter: blur(0.8px);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  /*z-index: -1;*/
+  height: 100%;
+  border-radius: inherit;
+}
+
+.sunny {
+  content: '';
+  opacity: 0.3;
+  background: url('https://images.unsplash.com/photo-1464660439080-b79116909ce7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3Vuc2hpbmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80')
+    no-repeat scroll top;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  background-size: cover;
+  filter: blur(0.8px);
+  -webkit-filter: blur(0.8px);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  /*z-index: -1;*/
+  height: 100%;
+  border-radius: inherit;
+}
 .overlay {
   opacity: 1;
   background-color: rgb(0, 0, 0); /* Fallback color */

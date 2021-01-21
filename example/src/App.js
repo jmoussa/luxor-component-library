@@ -48,7 +48,7 @@ class App extends React.Component {
   }
 
   onClickHandler = (evt) => {
-    console.log(evt)
+    console.log('Click Event')
   }
 
   render() {
@@ -477,6 +477,7 @@ class App extends React.Component {
               need an RapidAPI API Key stored in an environment variable called{' '}
               <code>REACT_APP_RAPIDAPI_KEY</code>
             </p>
+            <WeatherWidget city='new york city,us' margin='large' />
           </Box>
           <Box
             padding='large'
@@ -488,13 +489,11 @@ class App extends React.Component {
             roundedCorners
             backgroundColor={defaultTheme.palette.grey[300]}
           >
-            <WeatherWidget city='new york city,us' />
-            <WeatherWidget
-              city='london,uk'
-              margin='large'
-              paddingX='xxxlarge'
-              marginX='xxxlarge'
-            />
+            <WeatherWidget city='ontario,ca' margin='large' />
+            <Row>
+              <WeatherWidget city='london,uk' margin='large' />
+              <WeatherWidget city='melbourne,au' margin='large' />
+            </Row>
           </Box>
         </Row>
       </Stack>

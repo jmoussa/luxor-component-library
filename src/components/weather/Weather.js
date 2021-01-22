@@ -40,7 +40,7 @@ class WeatherWidget extends Component {
           function () {
             this.forceUpdateHandler()
           }.bind(this),
-          2000
+          10000
         )
       })
   }
@@ -72,16 +72,23 @@ class WeatherWidget extends Component {
         // console.log(weather) // useful for adding new features
         const s = weather.weather[0].description || undefined
         description = s.charAt(0).toUpperCase() + s.slice(1)
-        if (description.includes('cloud')) {
-          weatherBackgroundClass = styles.cloudy
-        } else if (description.includes('sun')) {
-          weatherBackgroundClass = styles.sunny
-        } else if (description.includes('snow')) {
-          weatherBackgroundClass = styles.snowy
-        } else if (description.includes('rain')) {
-          weatherBackgroundClass = styles.rainy
+        if (
+          this.props.backgroundType === undefined ||
+          this.props.backgroundType === 'dynamic'
+        ) {
+          if (description.includes('cloud')) {
+            weatherBackgroundClass = styles.cloudy
+          } else if (description.includes('sun')) {
+            weatherBackgroundClass = styles.sunny
+          } else if (description.includes('snow')) {
+            weatherBackgroundClass = styles.snowy
+          } else if (description.includes('rain')) {
+            weatherBackgroundClass = styles.rainy
+          } else {
+            weatherBackgroundClass = styles.bg
+          }
         } else {
-          weatherBackgroundClass = styles.bg
+          weatherBackgroundClass = styles.bgsolid
         }
       }
       return (

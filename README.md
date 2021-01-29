@@ -60,6 +60,14 @@ To run the live demo (screenshots below). Pull down the source code from github 
 
 --- 
 
+## TODO
+
+- Navbar component
+- Dropdown component
+- Text input component
+- Slider input component
+
+---
 # Screenshots
 
 ![T1](./screenshots/1.jpg?raw=true)

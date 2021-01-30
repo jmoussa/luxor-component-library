@@ -10,6 +10,15 @@
 npm install --save luxor-component-library
 ```
 
+## The Design Principles
+
+### Container Based Design
+
+The concept behind this design is using visual containers for everything. 
+Whether it be a Box for simple content or a Stack/Row to align multiple Boxes of content vertically/horizontally respectively. 
+
+The button component and weather widget are the beginning of a custom component library.
+
 ## Usage
 
 ```jsx

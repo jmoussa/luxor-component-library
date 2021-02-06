@@ -8,7 +8,8 @@ import {
   Stack,
   spacing,
   fontSizes,
-  WeatherWidget
+  WeatherWidget,
+  Input
 } from 'luxor-component-library'
 import 'luxor-component-library/dist/index.css'
 
@@ -494,6 +495,64 @@ class App extends React.Component {
               <WeatherWidget city='london,uk' margin='large' />
               <WeatherWidget city='melbourne,au' margin='large' />
             </Row>
+          </Box>
+        </Row>
+        <Row padding='xlarge' paddingTop='medium' space='medium'>
+          <Box
+            padding='large'
+            paddingBottom='medium'
+            marginX='medium'
+            marginY='medium'
+            display='block'
+            textAlign='center'
+            roundedCorners
+            backgroundColor={defaultTheme.palette.grey[300]}
+          >
+            <h1 style={header_styling}>Input Elements</h1>
+            <p style={paragraph_styling}>
+              This is the input component and has been adapted to work with our
+              color scheme by passing in the size (small, medium, large), color
+              (primary, seconday, error, or grey), and variant (solid, outline).
+              The default is a solid, medium, 'default', color scheme.
+            </p>
+          </Box>
+          <Box
+            padding='large'
+            paddingBottom='medium'
+            marginX='medium'
+            marginY='medium'
+            display='block'
+            textAlign='center'
+            roundedCorners
+            backgroundColor={defaultTheme.palette.grey[300]}
+          >
+            <Stack>
+              <Box padding='medium'>
+                <Input
+                  size='large'
+                  roundedCorners='2rem'
+                  placeholder='This is a the default color, solid, large input field'
+                />
+              </Box>
+              <Box padding='medium'>
+                <Input
+                  color='secondary'
+                  size='medium'
+                  width='600px'
+                  roundedCorners='2rem'
+                  placeholder='This is a secondary color, solid, medium input field, 600px wide'
+                />
+              </Box>
+              <Box padding='medium'>
+                <Input
+                  color='primary'
+                  size='small'
+                  roundedCorners='2rem'
+                  width='500px'
+                  placeholder='This is a primary color, solid, small input field, 500px wide'
+                />
+              </Box>
+            </Stack>
           </Box>
         </Row>
       </Stack>

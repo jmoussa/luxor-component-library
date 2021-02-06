@@ -1,4 +1,5 @@
 import Button from './components/button/Button'
+import Input from './components/input/Input'
 import { Box } from './components/box/Box'
 import { Row } from './components/row/Row'
 import { Stack } from './components/stack/Stack'
@@ -12,6 +13,7 @@ export {
   defaultTheme,
   Row,
   Stack,
+  Input,
   spacing,
   fontSizes,
   WeatherWidget

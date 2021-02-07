@@ -148,8 +148,11 @@ To run the live demo (screenshots below). Pull down the source code from github 
 
 ![T1](./screenshots/1.jpg?raw=true)
 ![T2](./screenshots/2.jpg?raw=true)
-![Boxes](./screenshots/Boxes.jpg?raw=true)
+![T3](./screenshots/3.jpg?raw=true)
+![Input](./screenshots/input.jpg?raw=true)
 ![Weather](./screenshots/weather.jpg?raw=true)
+
+---
 
 ## License
 

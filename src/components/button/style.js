@@ -87,13 +87,13 @@ const outlineVariantPropsByPalette = (colorInPalette) => {
     colorInPalette && {
       main: {
         border: `1px solid ${colorInPalette.main}`,
-        backgroundColor: defaultTheme.palette.common.white,
+        backgroundColor: colorInPalette.contrastText,
         color: colorInPalette.main
       },
       hover: {
         border: `1px solid ${colorInPalette.light}`,
         backgroundColor: colorInPalette.main,
-        color: defaultTheme.palette.common.white
+        color: colorInPalette.contrastText
       }
     }
   )

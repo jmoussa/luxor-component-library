@@ -43,29 +43,29 @@ const getPropsByVariant = ({ variant, color, theme }) => {
 
 const defaultSolidVariantProps = {
   main: {
-    background: defaultTheme.palette.grey[100],
-    color: defaultTheme.palette.common.white
+    background: defaultTheme.palette.common.white,
+    color: defaultTheme.palette.common.black
   },
   focus: {
-    background: defaultTheme.palette.grey[200]
+    color: defaultTheme.palette.common.white,
+    background: defaultTheme.palette.grey[100]
   },
   placeholder: {
-    background: defaultTheme.palette.grey[100],
-    color: defaultTheme.palette.common.white
+    color: defaultTheme.palette.common.black
   }
 }
 
 const defaultOutlineVariantProps = {
   main: {
-    background: defaultTheme.palette.common.white,
-    color: defaultTheme.palette.common.black
+    background: defaultTheme.palette.common.black,
+    color: defaultTheme.palette.secondary.light
   },
   focus: {
-    background: defaultTheme.palette.common.white,
+    background: defaultTheme.palette.secondary.light,
     color: defaultTheme.palette.common.black
   },
   placeholder: {
-    color: defaultTheme.palette.grey[300]
+    color: defaultTheme.palette.secondary.light
   }
 }
 
@@ -80,7 +80,7 @@ const solidVariantPropsByPalette = (colorInPalette) => {
         background: colorInPalette.main
       },
       placeholder: {
-        color: defaultTheme.palette.grey[300]
+        color: colorInPalette.contrastText
       }
     }
   )
@@ -90,15 +90,15 @@ const outlineVariantPropsByPalette = (colorInPalette) => {
   return (
     colorInPalette && {
       main: {
-        background: defaultTheme.palette.common.white,
+        background: colorInPalette.contrastText,
         color: colorInPalette.main
       },
       focus: {
         background: colorInPalette.main,
-        color: defaultTheme.palette.common.white
+        color: colorInPalette.contrastText
       },
       placeholder: {
-        color: defaultTheme.palette.grey[300]
+        color: colorInPalette.main
       }
     }
   )
@@ -128,7 +128,7 @@ const StyledInput = ({
     borderRadius = roundedCorners
   }
   if (width == null) {
-    width = '350px'
+    width = '400px'
   }
   return {
     onClick,

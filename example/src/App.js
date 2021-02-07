@@ -28,6 +28,7 @@ const paragraph_styling = {
 }
 const paragraph_list_styling = {
   ...paragraph_styling,
+  color: defaultTheme.palette.common.white,
   listStyleType: 'circle',
   marginLeft: spacing.xlarge
 }
@@ -38,9 +39,9 @@ const title_styling = {
   paddingBottom: 'medium'
 }
 const sub_header_styling = {
+  ...header_styling,
   fontFamily: defaultTheme.typography.secondaryFontFamily,
-  fontSize: fontSizes.sub_header,
-  color: defaultTheme.palette.secondary.light
+  fontSize: fontSizes.sub_header
 }
 class App extends React.Component {
   constructor(props) {
@@ -62,7 +63,7 @@ class App extends React.Component {
           // HEADER Container
           textAlign='center'
           paddingY='xxlarge'
-          backgroundColor={defaultTheme.palette.secondary.main}
+          backgroundColor={defaultTheme.palette.primary.light}
         >
           <h1 style={title_styling}>Luxor</h1>
           <h1 style={sub_header_styling}>Another Component Library</h1>
@@ -84,7 +85,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <h1 style={header_styling}>
               This is a Guide to the Luxor Component Library
@@ -171,7 +172,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <h1 id='button-header' style={header_styling}>
               Buttons
@@ -199,7 +200,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <Row space='large' paddingRight='medium'>
               <Stack space='large' paddingY='xxlarge'>
@@ -326,7 +327,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <h1 id='button-header' style={header_styling}>
               Boxes
@@ -375,7 +376,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <Stack
               padding='xxlarge'
@@ -384,7 +385,23 @@ class App extends React.Component {
               style={{ listStyleType: 'none' }}
             >
               <Box>
-                <Row textAlign='center' space='small'>
+                <h1 style={header_styling}></h1>
+                <p style={paragraph_styling}>
+                  The Examples below show some uses of the <code>Box</code>{' '}
+                  component. The two rows showcasing padding and margin are also
+                  wrapped in a <code>Row</code> element with small padding and
+                  small space in-between columns.
+                </p>
+              </Box>
+              <Box>
+                <Row
+                  color={defaultTheme.palette.common.white}
+                  textAlign='center'
+                  space='small'
+                  roundedCorners
+                  backgroundColor={defaultTheme.palette.grey[300]}
+                  padding='small'
+                >
                   <Box backgroundColor={defaultTheme.palette.primary.main}>
                     No Properties
                   </Box>
@@ -415,7 +432,14 @@ class App extends React.Component {
                 </Row>
               </Box>
               <Box>
-                <Row space='small'>
+                <Row
+                  color={defaultTheme.palette.common.white}
+                  textAlign='center'
+                  backgroundColor={defaultTheme.palette.grey[300]}
+                  roundedCorners
+                  space='small'
+                  padding='small'
+                >
                   <Box backgroundColor={defaultTheme.palette.primary.main}>
                     No Properties
                   </Box>
@@ -448,14 +472,76 @@ class App extends React.Component {
               <Box
                 padding='medium'
                 roundedCorners
-                backgroundColor={defaultTheme.palette.secondary.light}
+                backgroundColor={defaultTheme.palette.primary.light}
               >
-                <h1 style={header_styling}>Box with </h1>
+                <h1 style={header_styling}>Box with</h1>
                 <ul style={paragraph_list_styling}>
                   <li>Medium Padding</li>
                   <li>Rounded Corners</li>
-                  <li>Secondary light background color</li>
+                  <li>Primary light background color</li>
                 </ul>
+                <Box
+                  paddingX='medium'
+                  paddingBottom='medium'
+                  textAlign='left'
+                  roundedCorners
+                  backgroundColor={defaultTheme.palette.grey[400]}
+                  color={defaultTheme.palette.common.white}
+                >
+                  <pre>
+                    <code>
+                      {` 
+import {
+  Box,
+  defaultTheme,
+  spacing,
+  fontSizes
+} from 'luxor-component-library'
+import 'luxor-component-library/dist/index.css'
+
+
+// setup styles
+const header_styling = {
+  fontFamily: defaultTheme.typography.primaryFontFamily,
+  color: defaultTheme.palette.common.white
+}
+
+const paragraph_styling = {
+  textAlign: 'left',
+  padding: spacing.medium,
+  margin: spacing.medium,
+  fontFamily: defaultTheme.typography.primaryFontFamily,
+  fontSize: fontSizes.medium,
+  color: defaultTheme.palette.common.white,
+  lineHeight: 1.45
+}
+
+const paragraph_list_styling = {
+  ...paragraph_styling,
+  color: defaultTheme.palette.common.white,
+  listStyleType: 'circle',
+  marginLeft: spacing.xlarge
+}
+
+
+...now somewhere in the render function
+
+
+<Box
+  padding='medium'
+  roundedCorners
+  backgroundColor={defaultTheme.palette.primary.light}
+>
+  <h1 style={header_styling}>Box with</h1>
+  <ul style={paragraph_list_styling}>
+    <li>Medium Padding</li>
+    <li>Rounded Corners</li>
+    <li>Primary light background color</li>
+  </ul>
+</Box>`}
+                    </code>
+                  </pre>
+                </Box>
               </Box>
             </Stack>
           </Box>
@@ -469,7 +555,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <h1 style={header_styling}>Weather Widget</h1>
             <p style={paragraph_styling}>
@@ -488,7 +574,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <WeatherWidget city='ontario,ca' margin='large' />
             <Row>
@@ -506,7 +592,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <h1 style={header_styling}>Input Elements</h1>
             <p style={paragraph_styling}>
@@ -524,7 +610,7 @@ class App extends React.Component {
             display='block'
             textAlign='center'
             roundedCorners
-            backgroundColor={defaultTheme.palette.grey[300]}
+            backgroundColor={defaultTheme.palette.grey[200]}
           >
             <Stack>
               <Box padding='medium'>
@@ -532,6 +618,14 @@ class App extends React.Component {
                   size='large'
                   roundedCorners='2rem'
                   placeholder='This is a the default color, solid, large input field'
+                />
+              </Box>
+              <Box padding='medium'>
+                <Input
+                  size='large'
+                  variant='outline'
+                  roundedCorners='2rem'
+                  placeholder='This is a the default color, outline, large input field'
                 />
               </Box>
               <Box padding='medium'>

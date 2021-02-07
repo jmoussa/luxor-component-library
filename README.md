@@ -8,6 +8,7 @@
 
 ```bash
 npm install --save luxor-component-library
+export REACT_APP_RAPIDAPI_KEY='...' # needed for Weather widget
 ```
 
 ## The Design Principles
@@ -19,7 +20,14 @@ Whether it be a Box for simple content or a Stack/Row to align multiple Boxes of
 
 The button component and weather widget are the beginning of a custom component library.
 
+### Themes
+
+Themes can be customized and you can add your own `theme.js` file. 
+Use `src/utils/theme.js` as a template.
+
 #### For working code examples of the library at work, look at the /example/src/App.js
+
+---
 
 # Component Documentation 
 
@@ -27,7 +35,17 @@ The button component and weather widget are the beginning of a custom component 
 
 A note on the weather widget in that it requires an RapidAPI API key to function. Store the API key in an environment variable called `REACT_APP_RAPIDAPI_KEY` either with an export statement or in a `.env` file in the root folder.
 
----
+Supply the `<WeatherWidget>` compoent with a city prop [more info on fomatting]() and any margin/padding/other props you would pass to adjust the a `Box` component. 
+
+
+## Button Component
+
+For the most part it's the same as an html button with a few added styles available via props.
+- variant: ('solid'|'outline') where should color be placed?
+- color: ('primary', 'secondary', 'error') which part of the theme's color scheme did you want to design the button with
+- size: ('small'|'medium'|'large') size of the button
+- any other CSS properties you would assign to a button
+- `onClick` javascript event 
 
 ## Input Component
 

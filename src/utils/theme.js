@@ -8,15 +8,14 @@ const palette = {
     white
   },
   primary: {
-    main: '#36A378',
-    light: '#087CA7',
+    main: '#090C9B',
+    light: '#3066BE',
     contrastText: white
   },
   secondary: {
-    main: '#2D3047',
-    // light: '#d99d52',
-    light: '#E0A458',
-    contrastText: white
+    main: '#B4C5E4',
+    light: '#FBFFF1',
+    contrastText: black
   },
   error: {
     main: '#C04ABC',
@@ -24,10 +23,10 @@ const palette = {
     contrastText: white
   },
   grey: {
-    100: '#aa9fb1',
-    200: '#887f8e',
-    300: '#776f7c',
-    400: '#444047'
+    100: '#8a878f',
+    200: '#635f69',
+    300: '#3c3744',
+    400: '#302c36'
   }
 }
 

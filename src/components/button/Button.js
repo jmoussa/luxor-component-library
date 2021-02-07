@@ -9,9 +9,7 @@ class Button extends Component {
         color={this.props.color}
         size={this.props.size}
         {...this.props}
-      >
-        {this.props.text}
-      </StyledButton>
+      />
     )
   }
 }

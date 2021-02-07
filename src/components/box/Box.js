@@ -91,8 +91,7 @@ const StyledBox = ({
     color,
     transform,
     opacity,
-    fontFamily: theme.typography.primaryFontFamily,
-    ...props
+    fontFamily: theme.typography.primaryFontFamily
   }
 }
 

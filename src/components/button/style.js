@@ -120,6 +120,7 @@ const StyledButton = ({
     onClick,
     fontWeight: 500,
     cursor: 'pointer',
+    outline: 'none',
     opacity: disabled && 0.7,
     transition: 'all 0.2s linear',
     padding: buttonSizeProps.medium.padding,

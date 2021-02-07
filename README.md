@@ -44,6 +44,7 @@ For the most part it's the same as an html button with a few added styles availa
 - variant: ('solid'|'outline') where should color be placed?
 - color: ('primary', 'secondary', 'error') which part of the theme's color scheme did you want to design the button with
 - size: ('small'|'medium'|'large') size of the button
+- text: string text that will be displayed on the button 
 - any other CSS properties you would assign to a button
 - `onClick` javascript event 
 

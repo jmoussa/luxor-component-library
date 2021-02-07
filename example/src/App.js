@@ -379,15 +379,15 @@ class App extends React.Component {
             backgroundColor={defaultTheme.palette.grey[200]}
           >
             <Stack
-              padding='xxlarge'
+              padding='medium'
               textAlign='center'
               space='medium'
               style={{ listStyleType: 'none' }}
             >
               <Box>
-                <h1 style={header_styling}></h1>
+                <h1 style={header_styling}>Examples</h1>
                 <p style={paragraph_styling}>
-                  The Examples below show some uses of the <code>Box</code>{' '}
+                  The examples below show some uses of the <code>Box</code>{' '}
                   component. The two rows showcasing padding and margin are also
                   wrapped in a <code>Row</code> element with small padding and
                   small space in-between columns.

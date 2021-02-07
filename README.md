@@ -19,24 +19,9 @@ Whether it be a Box for simple content or a Stack/Row to align multiple Boxes of
 
 The button component and weather widget are the beginning of a custom component library.
 
-## Usage
+#### For working code examples of the library at work, look at the /example/src/App.js
 
-```jsx
-import React, { Component } from 'react'
-
-import { Box } from 'luxor-component-library'
-import 'luxor-component-library/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return (
-      <Box padding='medium' margin='small' roundedCorners>
-        Info in the box
-      </Box>
-    )
-  }
-}
-```
+# Component Documentation 
 
 ## Weather Widget
 
@@ -44,10 +29,72 @@ A note on the weather widget in that it requires an RapidAPI API key to function
 
 ---
 
-## Demo
+## Input Component
 
+The  `Input` component supports the same fields as it's html counterpart.
+- color: 'primary', 'secondary', 'error', 'default' | sets the color scheme of the input component
+- size: 'small', 'medium', 'large' | sets the size of the text (and the input box)
+- roundedCorners: (px|em|rem|...) | sets border radius
+- width: (px|em|rem|...) | width of component
+- placeholder: (string) | placeholder text
+- variant: (optional 'solid', 'outline') | sets color scheme to fill or outline the component
+
+```jsx
+<Input
+  color='primary'
+  size='small'
+  roundedCorners='2rem'
+  width='500px'
+  placeholder='This is a primary color, solid, small input field, 500px wide'
+/>
+```
+
+## Box Component
+
+The Box is the equivalent of a pre-styled div with all the css and js properties/functions can be applied via props.
+The Box supports margin, padding, display, backgroundColor/Image... and any other `div` supported attributes via props.
+```jsx
+<Box margin='small' padding='medium', backgroundColor='red' color='white' display='block'>
+  <p>
+    Some paragraph text. 
+  </p>
+</Box>
+```
+
+## Stack and Row Components
+
+Stack and Row components work in the same way but with different directions. 
+Their main purpose is to organize `Box` components either horizontally (`Row`) or vertically (`Stack`).
+- Both components accept the same attributes as the `Box` component
+- space: ('small', 'medium', 'large') | Space in-between the child components of the Row/Stack 
+```jsx
+<Stack space='medium' margin='small' padding='medium', backgroundColor='red' color='white' display='block'>
+  <Box>
+    Some text. 
+  </Box>
+  <Box>
+    Some text that will be positioned under that ^. 
+  </Box>
+</Stack>
+<Row space='medium' margin='small' padding='medium', backgroundColor='red' color='white' display='block'>
+  <Box>
+    Some text that will be positioned in the left. 
+  </Box> 
+  <Box>
+    Some text that will be positioned in the middle. 
+  </Box>
+  <Box>
+    Some text that will be positioned to the right. 
+  </Box>
+</Row>
+```
+__you can also nest a Row inside of a Stack and vice versa to achieve a kind of grid stucture__
+
+---
+
+## Demo | Documentation
+The demo (and conveniently live documentation) is available with a download of the [source code](https://github.com/jmoussa/luxor-component-library).
 To run the live demo (screenshots below). Pull down the source code from github and navigate to `example/` and run:
-
 ```bash
 >> npm install
 >> npm start
@@ -77,6 +124,7 @@ To run the live demo (screenshots below). Pull down the source code from github 
 - Slider input component
 
 ---
+
 # Screenshots
 
 ![T1](./screenshots/1.jpg?raw=true)

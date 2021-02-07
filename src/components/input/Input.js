@@ -11,7 +11,7 @@ class Input extends Component {
         variant={this.props.variant || 'solid'}
         roundedCorners={this.props.roundedCorners || null}
         {...this.props}
-      ></StyledInput>
+      />
     )
   }
 }

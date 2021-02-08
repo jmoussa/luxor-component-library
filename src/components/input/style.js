@@ -4,7 +4,7 @@ import { theme as defaultTheme } from '../../utils/theme'
 import { spacing, fontSizes } from '../../utils/units'
 import { isObjectEmpty } from '../../utils/helper'
 
-const IGNORED_PROPS = ['onClick', 'onChange', 'value']
+const IGNORED_PROPS = ['onClick']
 
 const inputConfig = {
   shouldForwardProp: (prop) =>

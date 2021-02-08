@@ -47,10 +47,15 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.onClickHandler = this.onClickHandler.bind(this)
+    this.onInputChange = this.onInputChange.bind(this)
   }
 
   onClickHandler = (evt) => {
     console.log('Click Event')
+  }
+
+  onInputChange = (e) => {
+    console.log(e.target.value)
   }
 
   render() {
@@ -643,6 +648,7 @@ const paragraph_list_styling = {
                   size='small'
                   roundedCorners='2rem'
                   width='500px'
+                  onChange={this.onInputChange}
                   placeholder='This is a primary color, solid, small input field, 500px wide'
                 />
               </Box>

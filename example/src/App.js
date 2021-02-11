@@ -46,15 +46,19 @@ const sub_header_styling = {
 class App extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      input_draft: ''
+    }
     this.onClickHandler = this.onClickHandler.bind(this)
     this.onInputChange = this.onInputChange.bind(this)
   }
 
-  onClickHandler = (evt) => {
+  onClickHandler = () => {
     console.log('Click Event')
   }
 
   onInputChange = (e) => {
+    this.setState({ input_draft: e.target.value })
     console.log(e.target.value)
   }
 
@@ -648,6 +652,7 @@ const paragraph_list_styling = {
                   size='small'
                   roundedCorners='2rem'
                   width='500px'
+                  value={this.state.input_draft}
                   onChange={this.onInputChange}
                   placeholder='This is a primary color, solid, small input field, 500px wide'
                 />

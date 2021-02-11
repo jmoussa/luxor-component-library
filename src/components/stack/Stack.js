@@ -10,9 +10,9 @@ export const Stack = ({ children, space, ...props }) => {
   return (
     <Box {...props}>
       {React.Children.map(children, (child, index) => {
-        if (!StackChildrenTypes.includes(child.type)) {
-          console.warn(UnsupportedChildTypeWarning)
-        }
+        //if (!StackChildrenTypes.includes(child.type)) {
+        //console.warn(UnsupportedChildTypeWarning)
+        //}
 
         if (index > 0) {
           return React.cloneElement(child, { marginTop: space })

@@ -4,7 +4,7 @@ import { theme as defaultTheme } from '../../utils/theme'
 import { spacing, fontSizes } from '../../utils/units'
 import { isObjectEmpty } from '../../utils/helper'
 
-const IGNORED_PROPS = ['onClick']
+const IGNORED_PROPS = []
 
 const inputConfig = {
   shouldForwardProp: (prop) =>
@@ -111,8 +111,8 @@ const StyledInput = ({
   disabled,
   enableElevation,
   onClick,
-  value,
   onChange,
+  value,
   theme,
   size,
   width,
@@ -134,8 +134,8 @@ const StyledInput = ({
   return {
     onClick,
     onChange,
-    placeholder,
     value,
+    placeholder,
     borderRadius,
     width,
     outline: 'none',

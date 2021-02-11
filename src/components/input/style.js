@@ -116,7 +116,8 @@ const StyledInput = ({
   theme,
   size,
   width,
-  roundedCorners
+  roundedCorners,
+  ...props
 }) => {
   if (isObjectEmpty(theme)) {
     theme = defaultTheme
@@ -131,7 +132,9 @@ const StyledInput = ({
   if (width == null) {
     width = '400px'
   }
+
   return {
+    ...props,
     onClick,
     onChange,
     value,

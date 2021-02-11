@@ -53,8 +53,14 @@ class App extends React.Component {
     this.onInputChange = this.onInputChange.bind(this)
   }
 
-  onClickHandler = () => {
-    console.log('Click Event')
+  onClickHandler = (event) => {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault()
+      // Trigger the button element with a click
+      console.log('Click Event')
+    }
   }
 
   onInputChange = (e) => {
@@ -654,6 +660,7 @@ const paragraph_list_styling = {
                   width='500px'
                   value={this.state.input_draft}
                   onChange={this.onInputChange}
+                  onKeyUp={(e) => this.onClickHandler(e)}
                   placeholder='This is a primary color, solid, small input field, 500px wide'
                 />
               </Box>
